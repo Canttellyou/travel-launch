@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100%;
+  color: white; }
+
+.coming-soon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Assets/Nature1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .coming-soon {
+      justify-content: center;
+      padding: 0 1rem; } }
+
+.opening {
+  margin-top: 4rem;
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .opening {
+      font-size: 3rem; } }
+
+.countdown {
+  margin-top: 2rem;
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+  border: 1rem solid white; }
+  .countdown .count {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1rem solid white;
+    width: 100%;
+    padding: 1rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .countdown .count {
+        font-weight: 500; } }
+  .countdown .time {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .countdown .time {
+        padding: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .countdown {
+      width: 100%;
+      font-size: 1.5rem; } }
+
+.subscribe {
+  width: 50%;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-left: 0.5rem solid white;
+  border-right: 0.5rem solid white; }
+  .subscribe h3 {
+    font-size: 3rem;
+    font-weight: 500; }
+    @media only screen and (max-width: 37.5em) {
+      .subscribe h3 {
+        font-size: 1.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .subscribe {
+      width: 80%;
+      padding: 1.5rem 1rem; } }
+
+.search {
+  width: 70%;
+  border: 1rem solid white;
+  padding: 6rem 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      width: 100%;
+      padding: 3rem; } }
+  .search form {
+    display: flex;
+    justify-content: space-around; }
+    @media only screen and (max-width: 37.5em) {
+      .search form {
+        flex-direction: column;
+        align-items: center; } }
+    .search form input {
+      width: 70%;
+      padding: 1rem;
+      border: none; }
+      @media only screen and (max-width: 37.5em) {
+        .search form input {
+          width: 90%;
+          padding: 1.5rem 1rem; } }
+      .search form input::placeholder {
+        font-family: inherit;
+        font-size: 1.7rem;
+        font-weight: 500; }
+      .search form input:focus {
+        outline: none; }
+    @media only screen and (max-width: 37.5em) {
+      .search form .btn {
+        margin-top: 1rem; } }
+    .search form .btn button {
+      font-family: inherit;
+      font-size: 3rem;
+      text-decoration: none;
+      outline: none;
+      color: white;
+      background-color: transparent;
+      border: none; }
+    .search form .btn:active {
+      transform: translateY(2px); }

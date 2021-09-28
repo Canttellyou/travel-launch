@@ -1,0 +1,127 @@
+.coming-soon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../Assets/Nature1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  @include respond(phone) {
+    justify-content: center;
+    padding: 0 1rem;
+  }
+}
+.opening {
+  margin-top: 4rem;
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+.countdown {
+  .count {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1rem solid white;
+    width: 100%;
+    padding: 1rem 0;
+    @include respond(phone) {
+      font-weight: 500;
+    }
+  }
+  .time {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1rem;
+    @include respond(phone) {
+      padding: 1rem;
+    }
+  }
+  margin-top: 2rem;
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+  border: 1rem solid white;
+  @include respond(phone) {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+.subscribe {
+  width: 50%;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-left: 0.5rem solid white;
+  border-right: 0.5rem solid white;
+  h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+  @include respond(phone) {
+    width: 80%;
+    padding: 1.5rem 1rem;
+  }
+}
+.search {
+  width: 70%;
+  border: 1rem solid white;
+  padding: 6rem 3rem;
+  @include respond(phone) {
+    width: 100%;
+    padding: 3rem;
+  }
+  form {
+    display: flex;
+    justify-content: space-around;
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+    input {
+      width: 70%;
+      padding: 1rem;
+      @include respond(phone) {
+        width: 90%;
+        padding: 1.5rem 1rem;
+      }
+      border: none;
+      &::placeholder {
+        font-family: inherit;
+        font-size: 1.7rem;
+        font-weight: 500;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn {
+      @include respond(phone) {
+        margin-top: 1rem;
+      }
+      button {
+        font-family: inherit;
+        font-size: 3rem;
+        text-decoration: none;
+        outline: none;
+        color: white;
+        background-color: transparent;
+        border: none;
+      }
+      &:active {
+        @include transform;
+      }
+    }
+  }
+}
