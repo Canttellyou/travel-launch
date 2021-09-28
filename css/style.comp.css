@@ -1,3 +1,11 @@
+@keyframes scaling {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -14,19 +22,19 @@ html {
 body {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   color: white; }
 
 .coming-soon {
-  width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Assets/Nature1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .coming-soon {
       justify-content: center;
@@ -36,22 +44,29 @@ body {
   margin-top: 4rem;
   font-size: 5rem;
   font-weight: 600;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 0.5rem solid white;
+  animation: scaling 0.6s ease-in-out; }
   @media only screen and (max-width: 37.5em) {
     .opening {
       font-size: 3rem; } }
+  .opening svg {
+    width: 5rem;
+    margin-bottom: -1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .opening svg {
+        width: 4rem; } }
 
 .countdown {
+  box-shadow: -1rem 4rem 5rem rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
   width: 70%;
   font-size: 2rem;
-  text-align: center;
-  border: 1rem solid white; }
+  text-align: center; }
   .countdown .count {
     font-weight: 600;
     font-size: 3rem;
-    margin-bottom: 2rem;
-    border-bottom: 1rem solid white;
+    margin-bottom: 0.5rem;
     width: 100%;
     padding: 1rem 0; }
     @media only screen and (max-width: 37.5em) {
@@ -61,6 +76,8 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 1.5rem 1rem; }
+    .countdown .time .container-day {
+      animation: scaling 0.6s ease-in-out; }
     @media only screen and (max-width: 37.5em) {
       .countdown .time {
         padding: 1rem;
@@ -71,13 +88,12 @@ body {
       font-size: 1.5rem; } }
 
 .subscribe {
-  width: 50%;
-  padding: 3rem 1rem;
-  text-align: center;
-  border-left: 0.5rem solid white;
-  border-right: 0.5rem solid white; }
+  margin-top: 3rem;
+  width: 70%;
+  padding: 2rem 1rem;
+  text-align: center; }
   .subscribe h3 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500; }
     @media only screen and (max-width: 37.5em) {
       .subscribe h3 {
@@ -88,9 +104,9 @@ body {
       padding: 1.5rem 1rem; } }
 
 .search {
+  margin-top: -1rem;
   width: 70%;
-  border: 1rem solid white;
-  padding: 6rem 3rem; }
+  padding: 1rem; }
   @media only screen and (max-width: 37.5em) {
     .search {
       width: 100%;
@@ -104,15 +120,16 @@ body {
         align-items: center; } }
     .search form input {
       width: 70%;
-      padding: 1rem;
+      padding: 1.5rem;
+      border-radius: 20px;
       border: none; }
       @media only screen and (max-width: 37.5em) {
         .search form input {
-          width: 90%;
-          padding: 1.8rem 1.5rem; } }
+          width: 100%;
+          padding: 1.8rem 0.5rem; } }
       .search form input::placeholder {
         font-family: inherit;
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         font-weight: 500;
         padding: 1rem; }
         @media only screen and (max-width: 37.5em) {
@@ -124,6 +141,7 @@ body {
       .search form .btn {
         margin-top: 1rem; } }
     .search form .btn button {
+      cursor: pointer;
       font-family: inherit;
       font-size: 3rem;
       text-decoration: none;
@@ -133,3 +151,37 @@ body {
       border: none; }
     .search form .btn:active {
       transform: translateY(2px); }
+
+.location {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  margin-left: -4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .location {
+      margin-left: 0; } }
+  .location > * {
+    margin-right: 4rem; }
+  .location .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .location img {
+    transform: scale(0.7); }
+  .location h2 {
+    text-align: center;
+    font-size: 1.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .location h2 {
+        font-size: 1.2rem; } }
+  .location .icons {
+    margin-top: 1rem;
+    margin-left: -2rem;
+    display: flex;
+    align-content: center; }
+    .location .icons > * {
+      margin-left: 2rem; }
+    .location .icons svg {
+      width: 3rem; }
+    .location .icons .insta {
+      transform: scale(1.2); }
