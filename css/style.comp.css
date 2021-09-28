@@ -42,7 +42,7 @@ body {
       font-size: 3rem; } }
 
 .countdown {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 70%;
   font-size: 2rem;
   text-align: center;
@@ -63,7 +63,8 @@ body {
     padding: 1.5rem 1rem; }
     @media only screen and (max-width: 37.5em) {
       .countdown .time {
-        padding: 1rem; } }
+        padding: 1rem;
+        padding-bottom: 1rem; } }
   @media only screen and (max-width: 37.5em) {
     .countdown {
       width: 100%;
@@ -108,11 +109,15 @@ body {
       @media only screen and (max-width: 37.5em) {
         .search form input {
           width: 90%;
-          padding: 1.5rem 1rem; } }
+          padding: 1.8rem 1.5rem; } }
       .search form input::placeholder {
         font-family: inherit;
         font-size: 1.7rem;
-        font-weight: 500; }
+        font-weight: 500;
+        padding: 1rem; }
+        @media only screen and (max-width: 37.5em) {
+          .search form input::placeholder {
+            font-size: 1.8rem; } }
       .search form input:focus {
         outline: none; }
     @media only screen and (max-width: 37.5em) {
